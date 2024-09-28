@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box1">
+            <label>Enter the numbers with Operation</label>
+        </div>
+
+        <div class="box2">
+        <textarea id="values" cols="30" rows="20"></textarea>
+            <br />
+            <label>Result:</label>
+            <input id="result" type="text">
+        </div>
+
+        <div class="box3">
+            <br />
+            <button id="calculate">Calculate</button>
+            <button id="clear">Clear</button>
+        </div>
+
+
+
+    </div>
+        <script>
+            let clear = document.getElementById("clear");
+            let calculate = document.getElementById("calculate");
+clear.addEventListener("click",()=>{
+    document.getElementById("values").value = ""; // Clear the textarea
+    document.getElementById("result").value = ""; // Clear the input field
+})
+calculate.addEventListener("click",()=>{
+     let a = document.getElementById("values").value;
+    let result =eval(a);
+    console.log(result);
+    //  console.log(typeof(temp));
+    //     Array.from(a).forEach(e=>{
+
+    //  })
+
+
+     document.getElementById("result").value = result;
+
+})
+
+        </script>
+
+        <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
